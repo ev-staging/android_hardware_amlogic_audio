@@ -14,6 +14,8 @@
 
 LOCAL_PATH := $(call my-dir)
 
+ifneq ($(filter $(LOCAL_PATH),$(PRODUCT_SOONG_NAMESPACES)),)
+
 # The default audio HAL module, which is a stub, that is loaded if no other
 # device specific modules are present. The exact load order can be seen in
 # libhardware/hardware.c
@@ -45,3 +47,5 @@ ifneq ($(findstring google_aec, $(call all-makefiles-under,$(TOPDIR)vendor/amlog
 endif
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
