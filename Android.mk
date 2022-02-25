@@ -39,7 +39,7 @@ LOCAL_C_INCLUDES += \
         system/media/audio_utils/include \
         system/media/audio_effects/include
 
-ifneq ($(findstring google_aec, $(call all-makefiles-under,$(TOPDIR)vendor/amlogic/yukawa)),)
+ifeq ($(AUDIO_FEATURE_GOOGLE_AEC), true)
     LOCAL_SHARED_LIBRARIES += google_aec
     LOCAL_CFLAGS += -DAEC_HAL
 endif

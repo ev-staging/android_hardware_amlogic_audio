@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef _YUKAWA_AUDIO_HW_H_
-#define _YUKAWA_AUDIO_HW_H_
+#ifndef _AMLOGIC_AUDIO_HW_H_
+#define _AMLOGIC_AUDIO_HW_H_
 
 #include <hardware/audio.h>
 #include <tinyalsa/asoundlib.h>
@@ -120,4 +120,4 @@ struct aec_info {
     size_t bytes;
 };
 
-#endif /* #ifndef _YUKAWA_AUDIO_HW_H_ */
+#endif /* #ifndef _AMLOGIC_AUDIO_HW_H_ */
